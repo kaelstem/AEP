@@ -38,8 +38,97 @@ O sistema possui as seguintes funcionalidades:
 - Registrar a quantidade efetiva de participantes quando a ação for realizada.
 - Gerar um resumo geral das ações cadastradas, incluindo quantidade de ações por situação e participação.
 - Validar dados de entrada, evitando códigos repetidos, quantidades negativas e opções inválidas.
-Situações das ações
+  
+Como compilar e executar
 
+Compilação
+
+O programa foi desenvolvido em linguagem C e pode ser compilado utilizando um compilador compatível, como o GCC.
+
+No terminal, dentro da pasta "src", execute:
+
+gcc pse_em_acao.c -o pse_em_acao
+
+Execução
+
+Após a compilação, execute o programa com:
+
+./pse_em_acao
+
+No Windows, caso o compilador gere um arquivo ".exe", execute:
+
+pse_em_acao.exe
+
+O sistema será iniciado pelo terminal e apresentará o menu principal para o usuário.
+Situações das ações
+Casos de uso
+
+UC01 — Cadastrar ação
+
+Ator: Usuário
+
+Objetivo: Cadastrar uma nova ação do PSE no sistema.
+
+Fluxo principal:
+
+1. O usuário acessa a opção de cadastro.
+2. Informa os dados da ação.
+3. O sistema verifica se o código já existe.
+4. O sistema valida os dados informados.
+5. A ação é armazenada no sistema.
+6. O sistema informa que o cadastro foi realizado.
+
+UC02 — Listar ações
+
+Ator: Usuário
+
+Objetivo: Visualizar todas as ações cadastradas.
+
+Fluxo principal:
+
+1. O usuário seleciona a opção de listar.
+2. O sistema verifica os registros existentes.
+3. O sistema apresenta as ações cadastradas.
+
+UC03 — Pesquisar ação
+
+Ator: Usuário
+
+Objetivo: Localizar uma ação por código, escola ou tema.
+
+Fluxo principal:
+
+1. O usuário escolhe o tipo de pesquisa.
+2. Informa o dado para busca.
+3. O sistema procura os registros correspondentes.
+4. O sistema apresenta os resultados encontrados.
+
+UC04 — Atualizar situação
+
+Ator: Usuário
+
+Objetivo: Alterar a situação de uma ação para planejada, realizada ou cancelada.
+
+Fluxo principal:
+
+1. O usuário informa o código da ação.
+2. O sistema localiza o registro.
+3. O usuário informa a nova situação.
+4. Caso a ação seja realizada, informa a quantidade efetiva de participantes.
+5. O sistema salva a atualização.
+
+UC05 — Gerar resumo
+
+Ator: Usuário
+
+Objetivo: Apresentar um resumo geral das ações cadastradas.
+
+Fluxo principal:
+
+1. O usuário seleciona a opção de resumo.
+2. O sistema contabiliza as ações por situação.
+3. O sistema calcula os participantes.
+4. O sistema apresenta o resumo na tela.
 As ações podem possuir três situações:
 
 - PLANEJADA
@@ -89,3 +178,32 @@ Link do vídeo da apresentação:
 Repositório
 
 Este projeto foi desenvolvido para a AEP — PSE em Ação da UNICESUMAR.
+
+Testes realizados
+
+Foram planejados testes para verificar o funcionamento das principais funcionalidades do sistema.
+
+Teste| Resultado esperado
+Cadastrar uma ação com dados válidos| Cadastro realizado com sucesso
+Cadastrar código repetido| Sistema informa que o código já existe
+Listar ações| Exibir todas as ações cadastradas
+Pesquisar código inexistente| Informar que nenhuma ação foi encontrada
+Atualizar situação| Alterar a situação corretamente
+Informar quantidade negativa| Sistema rejeita o valor
+Gerar resumo geral| Exibir os totais e o percentual de participação
+
+Os testes devem ser executados no programa para confirmar os resultados.
+
+Cuidados e privacidade
+
+O sistema utiliza exclusivamente dados fictícios ou informações coletivas para demonstração acadêmica.
+
+Não devem ser cadastrados nomes de estudantes, diagnósticos, prontuários ou informações clínicas individuais.
+
+O PSE em Ação tem finalidade administrativa e educacional, não realizando diagnósticos ou recomendações de tratamento.
+
+Considerações finais
+
+O desenvolvimento do PSE em Ação permitiu aplicar conhecimentos de programação em linguagem C, utilizando estruturas, vetores, funções, condicionais e repetições.
+
+A aplicação busca facilitar a organização e o acompanhamento das ações coletivas do Programa Saúde na Escola.
