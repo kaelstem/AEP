@@ -173,7 +173,7 @@ Apresentação em vídeo
 
 Link do vídeo da apresentação:
 
-[INSERIR LINK DO VÍDEO AQUI]
+https://youtu.be/F26TCZTJC7o?is=JICewNIEHdIIlbcd
 
 Repositório
 
